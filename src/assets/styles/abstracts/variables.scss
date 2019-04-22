@@ -1,0 +1,63 @@
+// Default breakpoints
+$breakpoints: (
+    mobile-xl: 569px, // breakpoint added in comps (http://ultron.wdproux.wdig.com/dcl/Cruise101/WhyCruise/SupplementalSection/index.html#artboard4)
+    tablet: 768px,
+    desktop-s: 960px, // breakpoint added in comps (http://ultron.wdproux.wdig.com/dcl/Cruise101/WhyCruise/PersistentPersonaNav/index.html#artboard2)
+    syndycated-desktop: 975px, // syndicated desktop viewport
+    desktop: 1024px,
+    desktop-l: 1440px
+);
+
+// Colors
+$colors: (
+    'transparent': transparent,
+    'persistent-navigation-border': #D8D8D8,
+    'carousel-section-border': #E9E9E9,
+    'hero-icon': #02819F,
+    'supplemental-section-border': #E7E7E7,
+    'sail-summary': #243A55,
+    'tooltip-cta-green': #37A867,
+    'copy-mobile': #244969,
+    'next-steps-gradient':#D3F2F7,
+    'find-cruise-button': #117E98,
+    'close-btn-x': #78899E,
+    'black-0': rgba(0, 0, 0, 0),
+    'black-04': rgba(0, 0, 0, 0.04),
+    'black-10': rgba(0, 0, 0, 0.1),
+    'black-12': rgba(0, 0, 0, 0.12),
+    'black-15': rgba(0, 0, 0, 0.15),
+    'black-18': rgba(0, 0, 0, 0.18),
+    'black-25': rgba(0, 0, 0, 0.25),
+    'black-30': rgba(0, 0, 0, 0.3),
+    'black-40': rgba(0, 0, 0, 0.4),
+    'black-70': rgba(0, 0, 0, 0.7),
+    'white-04': rgba(255, 255, 255, 0.4),
+    'white-45':rgba(255, 255, 255, 0.45)
+);
+
+//Z-index
+$zindex: (
+    'base': 9,
+    'menu': 99,
+    'hc-image': 0,
+    'hc-shadow': 1,
+    'hc-proggres-title': 2,
+    'hc-controls': 3,
+    'hb-separator': 0,
+    'hb-media': 1,
+    'hb-icon': 5,
+    'hb-content': 4,
+    'hb-base': 3,
+    'syndicated-logo': 2
+);
+
+$section-desktop-margin: calc((100vw * 0.3125) - 280px);
+
+$font-family-components: 'Avenir';
+$font-family-syndicate-layout: 'dclmdx', $font-family-components;
+
+// border radius
+$curved-radius: (
+    'hb-media':  0 0 200% 200%/0 0 50% 50%,
+    'circle' : 50%
+);

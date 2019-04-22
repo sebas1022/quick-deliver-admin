@@ -1,0 +1,10 @@
+<ng-template [ngIf]="accion === 'listar'">
+    <app-listar-usuario></app-listar-usuario>
+</ng-template>
+<ng-template [ngIf]="accion === 'crear'">
+    <app-crear-usuario></app-crear-usuario>
+</ng-template>
+<ng-template [ngIf]="accion === 'modificar'">
+    <app-modificar-usuario></app-modificar-usuario>
+</ng-template>
+

@@ -1,18 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+import { SchemaFormModule, WidgetRegistry, DefaultWidgetRegistry } from "ngx-schema-form";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AdminComponent } from './layouts/admin/admin.component';
+import { LoginComponent } from './layouts/login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdminComponent,
+    LoginComponent
   ],
   imports: [
+    SchemaFormModule.forRoot(),
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: WidgetRegistry, useClass: DefaultWidgetRegistry}],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

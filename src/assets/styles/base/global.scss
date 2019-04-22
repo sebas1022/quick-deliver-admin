@@ -1,0 +1,117 @@
+@import 'base';
+
+/**
+ * global.scss
+ * Contains the sitewide global styles
+ */
+
+* {
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    text-rendering: optimizeLegibility;
+
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+body {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+li,
+p,
+input,
+textarea {
+    font-family: $font-family-components;
+}
+
+/*
+* The following CSS rules about the header and footer styles
+* in the site, therefore, does not respect the project standard
+*/
+finder-syndicated-header {
+    .dclLogo {
+        z-index: zindex('syndicated-logo');
+    }
+
+    span:not(.title) {
+        font-family: $font-family-syndicate-layout;
+    }
+
+    .primary {
+        color: $active-dark-blue;
+
+        &:hover {
+            color: $active-dark-blue;
+        }
+    }
+
+    .globalNavigationBarWrapper.INTL {
+        box-shadow: none;
+
+        div.gnbLinkContainer {
+            z-index: 1;
+
+            .gnbCategory > .gnbCategoryHeader {
+                .icon:nth-child(2) {
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    .mobileSearch.hide.mobile-search-open {
+        position: relative;
+    }
+
+    @include from-breakpoint('syndycated-desktop') {
+        .gnbSubmenusWrapper {
+            top: 30px;
+        }
+    }
+}
+
+finder-syndicated-footer {
+    span {
+        font-family: $font-family-syndicate-layout;
+    }
+}
+
+.mobile-nav-open {
+    .home-page-container,
+    .persona-page-container,
+    .persistent-menu-container {
+        pointer-events: none;
+    }
+}
