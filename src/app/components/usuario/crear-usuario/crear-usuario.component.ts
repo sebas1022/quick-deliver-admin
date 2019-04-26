@@ -28,7 +28,7 @@ export class CrearUsuarioComponent implements OnInit {
                 "description": "Activo "
             }
         },
-        "required": ["usuario", "contrasena", "email","activo"]
+        "required": ["usuario", "contrasena", "email", "activo"]
     }
 
     myModel = {

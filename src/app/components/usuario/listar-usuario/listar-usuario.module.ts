@@ -8,6 +8,6 @@ import { ListarUsuarioComponent } from './listar-usuario.component'
     imports: [
         CommonModule
     ],
-    exports:[ ListarUsuarioComponent ]
+    exports: [ListarUsuarioComponent]
 })
 export class ListarUsuarioModule { }

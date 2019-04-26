@@ -9,8 +9,8 @@ const routes: Routes = [
         component: UsuarioComponent,
         children: [
             {
-              path: 'listar',
-              loadChildren:  './listar-usuario/listar-usuario.module#ListarUsuarioModule'
+                path: 'listar',
+                loadChildren: './listar-usuario/listar-usuario.module#ListarUsuarioModule'
             }
         ]
     }

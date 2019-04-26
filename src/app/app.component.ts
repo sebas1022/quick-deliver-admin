@@ -23,6 +23,6 @@ export class AppComponent {
         "description": "Remember me"
       }
     },
-    "required": ["email","password","rememberMe"]
+    "required": ["email", "password", "rememberMe"]
   }
 }

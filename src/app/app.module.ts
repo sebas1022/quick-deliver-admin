@@ -19,7 +19,7 @@ import { LoginComponent } from './layouts/login/login.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [{provide: WidgetRegistry, useClass: DefaultWidgetRegistry}],
+  providers: [{ provide: WidgetRegistry, useClass: DefaultWidgetRegistry }],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })

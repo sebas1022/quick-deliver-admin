@@ -8,9 +8,9 @@ describe('DomicilarioComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DomicilarioComponent ]
+      declarations: [DomicilarioComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -5,12 +5,12 @@ import { SchemaFormModule, WidgetRegistry, DefaultWidgetRegistry } from "ngx-sch
 import { CrearUsuarioComponent } from './crear-usuario.component';
 
 @NgModule({
-    declarations: [ CrearUsuarioComponent ],
+    declarations: [CrearUsuarioComponent],
     imports: [
         SchemaFormModule.forRoot(),
         CommonModule
     ],
-    exports:[ CrearUsuarioComponent ],
-    providers: [{provide: WidgetRegistry, useClass: DefaultWidgetRegistry}]
+    exports: [CrearUsuarioComponent],
+    providers: [{ provide: WidgetRegistry, useClass: DefaultWidgetRegistry }]
 })
 export class CrearUsuarioModule { }
