@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListarComponent } from './listar.component';
+import { ListarPedidosComponent } from './listar.component';
 
 @NgModule({
-  declarations: [ListarComponent],
+  declarations: [ListarPedidosComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [ListarPedidosComponent],
+
 })
-export class ListarModule { }
+export class ListarPedidosModule { }

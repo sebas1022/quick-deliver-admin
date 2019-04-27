@@ -12,6 +12,23 @@ export class ConnectorService {
     }
 
     getData(mod) {
-        return this.http.get(`${this.uri}/${mod}`);
+        return new Promise(resolve => {
+            this.http.get(`${this.uri}/${mod}`).subscribe(data => {
+                resolve(data);
+            }, err => {
+                console.log(err);
+            });
+        });
+    }
+
+    updateData(mod, data) {
+        return new Promise((resolve, reject) => {
+            this.http.put(`${this.uri}/${mod}`, data)
+                .subscribe(res => {
+                    resolve(res);
+                }, (err) => {
+                    reject(err);
+                });
+        });
     }
 }

@@ -16,6 +16,10 @@ const routes: Routes = [
             {
                 path: 'pedidos/:accion',
                 loadChildren: './components/pedidos/pedidos.module#PedidosModule'
+            },
+            {
+                path: 'domi/:accion/:idPedido',
+                loadChildren: './components/domicilario/domicilario.module#DomicilarioModule'
             }
         ]
     },

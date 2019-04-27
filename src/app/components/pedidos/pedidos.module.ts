@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ConnectorService } from '../../services/connector.service';
@@ -6,14 +6,18 @@ import { ConnectorService } from '../../services/connector.service';
 import { PedidosRoutingModule } from './pedidos-routing.module';
 import { PedidosComponent } from './pedidos.component';
 
+import { ListarPedidosModule } from './listar/listar.module';
+
 @NgModule({
-    declarations: [PedidosComponent],
     imports: [
         CommonModule,
-        PedidosRoutingModule
+        PedidosRoutingModule,
+        ListarPedidosModule
     ],
     providers: [
         ConnectorService
-    ]
+    ],
+    declarations: [PedidosComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PedidosModule { }

@@ -1,0 +1,54 @@
+<h1>
+    Asignar Domiciliario
+</h1>
+<div class="table-responsive">
+    <form (ngSubmit)="onSubmit();" [formGroup]="formulario">
+
+        <table class="table">
+            <tr>
+                <td>Barrio</td>
+                <td>{{pedidoData?.barrio}}</td>
+            </tr>
+            <tr>
+                <td>Dirección</td>
+                <td>{{pedidoData?.direccion}}</td>
+            </tr>
+            <tr>
+                <td colspan="2">Descripción</td>
+            </tr>
+            <tr>
+                <td colspan="2">{{pedidoData?.descripcion}}</td>
+            </tr>
+            <tr>
+                <td>Cliente</td>
+                <td>{{pedidoData?.cliente}}</td>
+            </tr>
+            <tr>
+                <td>
+                    Domiciliario
+                </td>
+                <td>
+                    <select [(ngModel)]="formData.idDomiciliario" formControlName="idDomiciliario" name="idDomiciliario">
+                        <option *ngFor="let domiciliario of domiciliarios" [value]="domiciliario._id">
+                            {{domiciliario.nombre}}
+                        </option>
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Tiempo Estimado
+                </td>
+                <td>
+                    <input type="text" formControlName="tiempoEstimado" [(ngModel)]="formData.tiempoEstimado" name="tiempoEstimado"> Min
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit">Asignar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

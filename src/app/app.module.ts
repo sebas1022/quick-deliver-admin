@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http'; 
 import { SchemaFormModule, WidgetRegistry, DefaultWidgetRegistry } from "ngx-schema-form";
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +17,8 @@ import { LoginComponent } from './layouts/login/login.component';
   imports: [
     SchemaFormModule.forRoot(),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [{ provide: WidgetRegistry, useClass: DefaultWidgetRegistry }],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

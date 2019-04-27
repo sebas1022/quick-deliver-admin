@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Params, ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-pedidos',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./pedidos.component.scss']
 })
 export class PedidosComponent implements OnInit {
-
-    constructor() { }
+    private accion: Params;
+    constructor(private route: ActivatedRoute) { }
 
     ngOnInit() {
+        this.route.params.subscribe((params: Params) => {
+            this.accion = params['accion'];
+        });
     }
+
 
 }

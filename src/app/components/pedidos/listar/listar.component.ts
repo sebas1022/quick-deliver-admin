@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { ConnectorService } from '../../../services/connector.service';
 
 @Component({
-  selector: 'app-listar',
-  templateUrl: './listar.component.html',
-  styleUrls: ['./listar.component.scss']
+    selector: 'app-listar-pedidos',
+    templateUrl: './listar.component.html',
+    styleUrls: ['./listar.component.scss']
 })
-export class ListarComponent implements OnInit {
+export class ListarPedidosComponent implements OnInit {
 
-  constructor() { }
+    constructor(private connector: ConnectorService, private router: Router) { }
+    pedidos;
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.connector.getData('pedido').then(data => {
+            this.pedidos = data;
+        });
+    }
+    goToAsignar(e, id) {
+        this.router.navigate(['/domi/asignar',id]);
+    }
 
 }
